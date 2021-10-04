@@ -14,7 +14,7 @@ public class Imobiliaria {
     public String toString() {
         StringBuilder retorno = new StringBuilder();
         retorno.append("Quantidade de imoveis: " +imoveis.size());
-        retorno.append("Imoveis: ");
+        retorno.append("\nImoveis: ");
         retorno.append("\n " +imoveis);
         return retorno.toString();
     }
