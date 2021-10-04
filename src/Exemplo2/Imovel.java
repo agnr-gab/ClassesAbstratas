@@ -7,7 +7,7 @@ public class Imovel {
     private String endereco;
     private double valorDoAluguel;
     private Funcionario funcionarioResponsavel;
-    private List<Morador> moradores = new ArrayList<>();
+    static List<Morador> moradores = new ArrayList<>();
 
     public Imovel() {
     }
@@ -62,7 +62,7 @@ public class Imovel {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("\n Endereço: " + endereco);
+        retorno.append("\n ______Endereço: " + endereco);
         retorno.append("\n Valor do Aluguel: R$" + valorDoAluguel);
         retorno.append("\n ______Funcionário responsável______ " + funcionarioResponsavel);
         retorno.append("\n Quantidade de moradores: " + moradores.size());
