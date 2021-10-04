@@ -2,6 +2,8 @@ package Exemplo2;
 
 import java.util.Scanner;
 
+import static Exemplo2.Imovel.moradores;
+
 public class Sistema {
     private static Scanner capturarDados(String mensagem) {
         System.out.println(mensagem);
@@ -34,6 +36,17 @@ public class Sistema {
             imovel.adicionarMorador(morador);
         }
         return imovel;
+    }
+    public void excluirMorador (String cpf, String endereco){
+        Morador moradorASerExcluido = null;
+
+        for (Morador referencia: moradores) {
+            if (referencia.getCpf().equals(cpf)) {
+                moradorASerExcluido = referencia;
+                System.out.println("Morador excluído de cadastro!");
+            }
+        }
+        moradores.remove(moradorASerExcluido);
     }
 
     public static Funcionario cadastrarFuncionario() {
