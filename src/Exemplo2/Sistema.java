@@ -31,6 +31,14 @@ public class Sistema {
         }
         return imovel;
     }
+    public static Funcionario cadastrarFuncionario(){
+        String nome = capturarDados("Digite o nome do Funcionário: ").nextLine();
+        String cpf = capturarDados("Digite o cpf do Funcionário: ").nextLine();
+        String ctps = capturarDados("Digite o número da carteira de trabalho do Funcionário: ").nextLine();
+
+        Funcionario funcionario = new Funcionario(nome, cpf, ctps);
+        return funcionario;
+    }
 
 
 }
