@@ -17,10 +17,19 @@ public class Sistema {
         String nome = capturarDados("Digite o nome: ").nextLine();
         String cpf = capturarDados("Digite o cpf: ").nextLine();
         String telefone = capturarDados("Digite o  telefone: ").nextLine();
-        double renda = capturarDados("Digite o salario: ").nextDouble();
+        double renda = capturarDados("Digite o salário: ").nextDouble();
 
         Morador morador = new Morador(nome, cpf, telefone, renda);
         return morador;
+    }
+    public static Imovel adicionarMoradores(Imovel imovel){
+        int qtdMoradores = capturarDados("Digite a quantidade de moradores: ").nextInt();
+        for (int i = 1; i <= qtdMoradores; i++) {
+            System.out.println("Cadastrar o " + i + "º morador");
+            Morador morador = cadastrarMoradores();
+            imovel.adicionarMorador(morador);
+        }
+        return imovel;
     }
 
 
