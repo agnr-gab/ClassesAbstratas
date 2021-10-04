@@ -9,6 +9,14 @@ public class Imovel {
     private Funcionario funcionarioResponsavel;
     private List<Morador> moradores = new ArrayList<>();
 
+    public Imovel() {
+    }
+
+    public Imovel(String endereco, double valorDoAluguel) {
+        this.endereco = endereco;
+        this.valorDoAluguel = valorDoAluguel;
+    }
+
     public Imovel(String endereco, double valorDoAluguel, Funcionario funcionarioResponsavel) {
         this.endereco = endereco;
         this.valorDoAluguel = valorDoAluguel;
@@ -50,6 +58,7 @@ public class Imovel {
     public void adicionarMorador(Morador novoMorador) {
         moradores.add(novoMorador);
     }
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
