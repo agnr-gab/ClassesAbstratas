@@ -4,10 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Imobiliaria {
-    private List <Imovel> imoveis = new ArrayList<>();
+    static List <Imovel> imoveis = new ArrayList<>();
 
     public void adicionarImovel(Imovel imovel){
         imoveis.add(imovel);
+    }
+
+    public static List<Imovel> getImoveis() {
+        return imoveis;
+    }
+
+    public static void setImoveis(List<Imovel> imoveis) {
+        Imobiliaria.imoveis = imoveis;
     }
 
     @Override
